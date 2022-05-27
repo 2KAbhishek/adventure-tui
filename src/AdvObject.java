@@ -80,7 +80,12 @@ public class AdvObject {
      * @return the object if an object is successfully read; null at end of file
      */
     public static AdvObject readFromFile(Scanner scan) {
-        return AdvObjectStub.readFromFile(scan); // Replace with your code
+        if (!scan.hasNext())
+            return null;
+        String name = scan.next();
+        String description = scan.nextLine().trim();
+        int initialLocation = scan.nextInt();
+        return new AdvObject(name, description, initialLocation);
     }
 
     /* Private instance variables */
