@@ -64,7 +64,20 @@ public class Adventure {
         currentRoom.setVisited(true);
         System.out.println(currentRoom.getName());
     }
+
+    private void setUpCommands() {
+        commands.put("QUIT", AdvCommand.QUIT);
+        commands.put("LOOK", AdvCommand.LOOK);
+        commands.put("INVENTORY", AdvCommand.INVENTORY);
+        commands.put("TAKE", AdvCommand.TAKE);
+        commands.put("DROP", AdvCommand.DROP);
+        commands.put("HELP", AdvCommand.HELP);
+        commands.put("NORTH", AdvCommand.NORTH);
+        commands.put("SOUTH", AdvCommand.SOUTH);
+        commands.put("EAST", AdvCommand.EAST);
+        commands.put("WEST", AdvCommand.WEST);
     }
+
     }
 
     /* Method: executeMotionCommand(direction) */
