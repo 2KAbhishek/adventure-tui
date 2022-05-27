@@ -49,7 +49,20 @@ public class Adventure {
      *                  The string indicating the direction of motion
      */
     public void executeMotionCommand(String direction) {
-        super.executeMotionCommand(direction); // Replace with your code
+        for (AdvMotionTableEntry entry : currentRoom.getMotionTable()) {
+            if (entry.getDirection().equals(direction)) {
+                if (entry.getKeyName() != null) {
+                    if (!hasItem(entry.getKeyName())) {
+                        System.out.println("You need " + entry.getKeyName() + " to go there.");
+                        return;
+                    }
+                } else {
+                    setCurrentRoom(entry.getDestinationRoom());
+                }
+            }
+        }
+    }
+
     private boolean hasItem(String keyName) {
         for (AdvObject obj : inventory) {
             if (obj.getName().equals(keyName)) {
