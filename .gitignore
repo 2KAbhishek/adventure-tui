@@ -1,1 +1,5 @@
-# Excluded files
+# Class folder
+bin/
+
+# Class files
+*.class
