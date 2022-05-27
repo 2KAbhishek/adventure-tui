@@ -40,7 +40,7 @@ public class AdvObject {
      * @return The name of the object
      */
     public String getName() {
-        return super.getName(); // Replace with your code
+        return this.name;
     }
 
     /* Method: getDescription() */
@@ -53,7 +53,7 @@ public class AdvObject {
      * @return The description of the object
      */
     public String getDescription() {
-        return super.getDescription(); // Replace with your code
+        return this.description;
     }
 
     /* Method: getInitialLocation() */
@@ -64,7 +64,7 @@ public class AdvObject {
      * @return The room number in which the object initially resides
      */
     public int getInitialLocation() {
-        return super.getInitialLocation(); // Replace with your code
+        return this.initialLocation;
     }
 
     /* Method: readFromFile(scan) */
