@@ -53,6 +53,18 @@ public class Adventure {
             System.exit(1);
         }
     }
+
+    private void setCurrentRoom(int roomNumber) {
+        for (AdvRoom room : rooms) {
+            if (room.getRoomNumber() == roomNumber) {
+                currentRoom = room;
+                break;
+            }
+        }
+        currentRoom.setVisited(true);
+        System.out.println(currentRoom.getName());
+    }
+    }
     }
 
     /* Method: executeMotionCommand(direction) */
