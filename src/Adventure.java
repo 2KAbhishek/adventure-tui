@@ -12,7 +12,7 @@ import java.util.*;
  * This class is the main program class for the Adventure game.
  */
 
-public class Adventure extends AdventureStub {
+public class Adventure {
 
     // Use this scanner for any console input
     private static Scanner scan = new Scanner(System.in);
@@ -22,9 +22,16 @@ public class Adventure extends AdventureStub {
      */
     public static void setScanner(Scanner theScanner) {
         scan = theScanner;
-        // Delete the following line when done
-        AdventureStub.setScanner(theScanner);
     }
+
+    /* Private instance variables */
+    private ArrayList<AdvRoom> rooms;
+    private AdvRoom currentRoom;
+    private ArrayList<AdvObject> inventory;
+    private HashMap<String, AdvCommand> commands;
+    private HashMap<String, AdvObject> objects;
+
+    private final String DATA_PATH = "data/";
 
     /**
      * Runs the adventure program
