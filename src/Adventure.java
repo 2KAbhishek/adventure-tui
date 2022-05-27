@@ -78,6 +78,25 @@ public class Adventure {
         commands.put("WEST", AdvCommand.WEST);
     }
 
+    private void setUpObjects(String gameName) {
+        try {
+            Scanner scan = new Scanner(new File(DATA_PATH + gameName + "Objects.txt"));
+            while (scan.hasNextLine()) {
+                String name = scan.nextLine();
+                if (name.equals("")) {
+                    continue;
+                }
+                String description = scan.nextLine();
+                int initialLocation = Integer.parseInt(scan.nextLine());
+                AdvObject obj = new AdvObject(name, description, initialLocation);
+                objects.put(name, obj);
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+            System.exit(1);
+        }
+    }
+
     }
 
     /* Method: executeMotionCommand(direction) */
