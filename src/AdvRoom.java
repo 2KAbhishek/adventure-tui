@@ -186,5 +186,11 @@ public class AdvRoom {
     }
 
     /* Private instance variables */
-    // Add your own instance variables here
+    private int roomNumber;
+    private String name;
+    private String[] description;
+    private boolean visited;
+    private ArrayList<AdvMotionTableEntry> motionTable;
+    private ArrayList<AdvObject> objects;
+
 }
