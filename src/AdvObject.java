@@ -24,7 +24,13 @@ import java.util.Scanner;
  * this class show how to use the initialized data structure.
  */
 
-public class AdvObject extends AdvObjectStub {
+public class AdvObject {
+
+    public AdvObject(String name, String description, int initialLocation) {
+        this.name = name;
+        this.description = description;
+        this.initialLocation = initialLocation;
+    }
 
     /* Method: getName() */
     /**
