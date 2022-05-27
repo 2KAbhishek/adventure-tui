@@ -189,21 +189,30 @@ public class AdvRoom {
      * @return a room if successfully read; null if at end of file
      */
     public static AdvRoom readFromFile(Scanner scan) {
-        if (!scan.hasNextInt()) {
+        // while (!scan.hasNextInt()) {
+        //     if (!scan.hasNextLine()) {
+        //         return null;
+        //     }
+        //     scan.nextLine();
+        // }
+        String line = scan.nextLine();
+        if (line.equals("")) {
             return null;
         }
-        int roomNumber = scan.nextInt();
-
-        if (!scan.hasNext()) {
-            return null;
-        }
+        int roomNumber = Integer.parseInt(line);
         String name = scan.nextLine();
 
         ArrayList<String> desc = new ArrayList<String>();
-        while (!scan.nextLine().equals("-----")) {
-            desc.add(scan.nextLine());
+        while (scan.hasNextLine()) {
+            line = scan.nextLine();
+            if (line.equals("-----")) {
+                break;
+            }
+            desc.add(line);
         }
-        String[] description = (String[]) desc.toArray();
+        String[] description = Arrays.copyOf(desc.toArray(), desc.size(),
+                String[].class);
+        desc.clear();
 
         AdvRoom room = new AdvRoom(roomNumber, name, description);
 
