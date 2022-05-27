@@ -216,11 +216,18 @@ public class AdvRoom {
 
         AdvRoom room = new AdvRoom(roomNumber, name, description);
 
-        while (!scan.hasNextInt()) {
+        while (!scan.hasNextInt() && scan.hasNextLine()) {
             String entryStr = scan.nextLine();
-            String dir = entryStr.split(" ")[0];
-            int destRoom = Integer.parseInt(entryStr.split(" ")[1].replaceAll("[^0-9]", ""));
-            String key = entryStr.substring(entryStr.indexOf('/') + 1);
+            if (entryStr.equals("")) {
+                break;
+            }
+            String key = null;
+            String[] tokens = entryStr.split("\\s+");
+            String dir = tokens[0];
+            int destRoom = Integer.parseInt(tokens[1].replaceAll("[^0-9]", ""));
+            if (tokens[1].indexOf('/') > 1) {
+                key = entryStr.substring(entryStr.indexOf('/') + 1);
+            }
             AdvMotionTableEntry entry = new AdvMotionTableEntry(dir, destRoom, key);
             room.motionTable.add(entry);
         }
