@@ -110,6 +110,6 @@ class DropCommand extends AdvCommand {
 
 class HelpCommand extends AdvCommand {
     public void execute(Adventure game, AdvObject obj) {
-        // Add your code here
+        game.executeHelpCommand();
     }
 }
