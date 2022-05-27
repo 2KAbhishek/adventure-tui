@@ -26,6 +26,13 @@ import java.util.*;
  */
 
 public class AdvRoom {
+    /* Private instance variables */
+    private int roomNumber;
+    private String name;
+    private String[] description;
+    private boolean visited;
+    private ArrayList<AdvMotionTableEntry> motionTable;
+    private ArrayList<AdvObject> objects;
 
     public AdvRoom(int roomNumber, String name, String[] description) {
         this.roomNumber = roomNumber;
@@ -213,13 +220,4 @@ public class AdvRoom {
         }
         return room;
     }
-
-    /* Private instance variables */
-    private int roomNumber;
-    private String name;
-    private String[] description;
-    private boolean visited;
-    private ArrayList<AdvMotionTableEntry> motionTable;
-    private ArrayList<AdvObject> objects;
-
 }

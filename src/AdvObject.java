@@ -24,6 +24,10 @@ import java.util.Scanner;
  */
 
 public class AdvObject {
+    /* Private instance variables */
+    private String name;
+    private String description;
+    private int initialLocation;
 
     public AdvObject(String name, String description, int initialLocation) {
         this.name = name;
@@ -87,10 +91,4 @@ public class AdvObject {
         int initialLocation = scan.nextInt();
         return new AdvObject(name, description, initialLocation);
     }
-
-    /* Private instance variables */
-    private String name;
-    private String description;
-    private int initialLocation;
-
 }

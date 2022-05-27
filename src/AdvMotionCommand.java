@@ -6,6 +6,8 @@
  */
 
 public class AdvMotionCommand extends AdvCommand {
+    /* Private instance variables */
+    private String direction;
 
     /* Constructor: AdvMotionCommand(dir) */
     /**
@@ -28,8 +30,4 @@ public class AdvMotionCommand extends AdvCommand {
     public void execute(Adventure game, AdvObject obj) {
         game.executeMotionCommand(direction);
     }
-
-    /* Private instance variables */
-
-    private String direction;
 }

@@ -4,6 +4,10 @@
  */
 
 public class AdvMotionTableEntry {
+    /* Private instance variables */
+    private String direction;
+    private int destinationRoom;
+    private String keyName;
 
     /* Constructor: AdvMotionTableEntry(dir, room, key) */
     /**
@@ -49,9 +53,4 @@ public class AdvMotionTableEntry {
     public String getKeyName() {
         return keyName;
     }
-
-    /* Private instance variables */
-    private String direction;
-    private int destinationRoom;
-    private String keyName;
 }
