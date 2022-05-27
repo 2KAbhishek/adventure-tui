@@ -36,16 +36,21 @@ public abstract class AdvCommand {
 
     /** The predefined entry for the NORTH command */
     public static final AdvMotionCommand NORTH = new AdvMotionCommand("NORTH");
-
     /** The predefined entry for the SOUTH command */
     public static final AdvMotionCommand SOUTH = new AdvMotionCommand("SOUTH");
-
     /** The predefined entry for the EAST command */
     public static final AdvMotionCommand EAST = new AdvMotionCommand("EAST");
-
     /** The predefined entry for the WEST command */
     public static final AdvMotionCommand WEST = new AdvMotionCommand("WEST");
 
+    /** The predefined entry for the IN command */
+    public static final AdvMotionCommand IN = new AdvMotionCommand("IN");
+    /** The predefined entry for the OUT command */
+    public static final AdvMotionCommand OUT = new AdvMotionCommand("OUT");
+    /** The predefined entry for the UP command */
+    public static final AdvMotionCommand UP = new AdvMotionCommand("UP");
+    /** The predefined entry for the DOWN command */
+    public static final AdvMotionCommand DOWN = new AdvMotionCommand("DOWN");
     /* Abstract method: execute(game, obj) */
     /**
      * Executes this command in the context of the specified adventure game. The
