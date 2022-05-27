@@ -34,6 +34,18 @@ public abstract class AdvCommand {
     /** The predefined entry for the HELP command */
     public static final AdvCommand HELP = new HelpCommand();
 
+    /** The predefined entry for the NORTH command */
+    public static final AdvMotionCommand NORTH = new AdvMotionCommand("NORTH");
+
+    /** The predefined entry for the SOUTH command */
+    public static final AdvMotionCommand SOUTH = new AdvMotionCommand("SOUTH");
+
+    /** The predefined entry for the EAST command */
+    public static final AdvMotionCommand EAST = new AdvMotionCommand("EAST");
+
+    /** The predefined entry for the WEST command */
+    public static final AdvMotionCommand WEST = new AdvMotionCommand("WEST");
+
     /* Abstract method: execute(game, obj) */
     /**
      * Executes this command in the context of the specified adventure game. The
