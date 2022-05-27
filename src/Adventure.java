@@ -59,7 +59,10 @@ public class Adventure {
      * the program should continue as usual.
      */
     public void executeQuitCommand() {
-        super.executeQuitCommand(); // Replace with your code
+        System.out.println("Do you want to quit the game?");
+        if (scan.next().trim().equals("YES")) {
+            System.exit(0);
+        }
     }
 
     /* Method: executeHelpCommand() */
