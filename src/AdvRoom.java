@@ -45,7 +45,7 @@ public class AdvRoom {
      * @return The room number
      */
     public int getRoomNumber() {
-        return super.getRoomNumber(); // Replace with your code
+        return this.roomNumber;
     }
 
     /* Method: getName() */
@@ -56,7 +56,7 @@ public class AdvRoom {
      * @return The room name
      */
     public String getName() {
-        return super.getName(); // Replace with your code
+        return this.name;
     }
 
     /* Method: getDescription() */
@@ -68,7 +68,7 @@ public class AdvRoom {
      * @return An array of strings giving the long description of the room
      */
     public String[] getDescription() {
-        return super.getDescription(); // Replace with your code
+        return this.description;
     }
 
     /* Method: addObject(obj) */
@@ -153,7 +153,7 @@ public class AdvRoom {
      * @return true if the room has been visited; false otherwise
      */
     public boolean hasBeenVisited() {
-        return super.hasBeenVisited(); // Replace with your code
+        return this.visited;
     }
 
     /* Method: getMotionTable() */
@@ -166,7 +166,7 @@ public class AdvRoom {
      * @return The array of motion table entries associated with this room
      */
     public AdvMotionTableEntry[] getMotionTable() {
-        return super.getMotionTable(); // Replace with your code
+        return (AdvMotionTableEntry[]) this.motionTable.toArray();
     }
 
     /* Method: readFromFile(rd) */
