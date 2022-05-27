@@ -182,7 +182,30 @@ public class AdvRoom {
      * @return a room if successfully read; null if at end of file
      */
     public static AdvRoom readFromFile(Scanner scan) {
-        return AdvRoomStub.readFromFile(scan); // Replace with your code
+        if (!scan.hasNextInt())
+            return null;
+        int roomNumber = scan.nextInt();
+
+        if (!scan.hasNext())
+            return null;
+        String name = scan.nextLine();
+
+        ArrayList<String> desc = new ArrayList<String>();
+        while (!scan.nextLine().equals("-----"))
+            desc.add(scan.nextLine());
+        String[] description = (String[]) desc.toArray();
+
+        AdvRoom room = new AdvRoom(roomNumber, name, description);
+
+        while (!scan.hasNextInt()) {
+            String entryStr = scan.nextLine();
+            String dir = entryStr.split(" ")[0];
+            int destRoom = Integer.parseInt(entryStr.split(" ")[1].replaceAll("[^0-9]", ""));
+            String key = entryStr.substring(entryStr.indexOf('/') + 1);
+            AdvMotionTableEntry entry = new AdvMotionTableEntry(dir, destRoom, key);
+            room.motionTable.add(entry);
+        }
+        return room;
     }
 
     /* Private instance variables */
