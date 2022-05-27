@@ -172,7 +172,8 @@ public class AdvRoom {
      * @return The array of motion table entries associated with this room
      */
     public AdvMotionTableEntry[] getMotionTable() {
-        return (AdvMotionTableEntry[]) this.motionTable.toArray();
+        return Arrays.copyOf(motionTable.toArray(), motionTable.size(),
+                AdvMotionTableEntry[].class);
     }
 
     /* Method: readFromFile(rd) */
