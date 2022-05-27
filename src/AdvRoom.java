@@ -26,7 +26,16 @@ import java.util.*;
  * the initialized data structure.
  */
 
-public class AdvRoom extends AdvRoomStub {
+public class AdvRoom {
+
+    public AdvRoom(int roomNumber, String name, String[] description) {
+        this.roomNumber = roomNumber;
+        this.name = name;
+        this.description = description;
+        this.objects = new ArrayList<AdvObject>();
+        this.visited = false;
+        this.motionTable = new ArrayList<AdvMotionTableEntry>();
+    }
 
     /* Method: getRoomNumber() */
     /**
