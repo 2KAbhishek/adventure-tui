@@ -38,6 +38,21 @@ public class Adventure {
      */
     public static void main(String[] args) {
         AdventureStub.main(args); // Replace with your code
+    private void setUpRooms(String gameName) {
+        try {
+            Scanner roomScan = new Scanner(new File(DATA_PATH + gameName + "Rooms.txt"));
+            while (roomScan.hasNextLine()) {
+                AdvRoom room = AdvRoom.readFromFile(roomScan);
+                if (room == null) {
+                    continue;
+                }
+                rooms.add(room);
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+            System.exit(1);
+        }
+    }
     }
 
     /* Method: executeMotionCommand(direction) */
