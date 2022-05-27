@@ -142,7 +142,7 @@ public class AdvRoom {
      *             The new state of the "visited" flag
      */
     public void setVisited(boolean flag) {
-        super.setVisited(flag); // Replace with your code
+        this.visited = flag;
     }
 
     /* Method: hasBeenVisited() */
