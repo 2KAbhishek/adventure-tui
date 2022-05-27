@@ -136,10 +136,6 @@ public class AdvRoom {
         return objects.get(index);
     }
 
-    public ArrayList<AdvObject> getObjects() {
-        return objects;
-    }
-
     /* Method: setVisited(flag) */
     /**
      * Sets the flag indicating that this room has been visited according to the
