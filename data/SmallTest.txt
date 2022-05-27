@@ -1,0 +1,21 @@
+Small
+in
+take keys
+out
+down
+d
+down
+d
+take lamp
+i
+west
+w
+take rod
+i
+east
+drop lamp
+i
+west
+u
+q
+y
