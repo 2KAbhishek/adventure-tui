@@ -38,6 +38,25 @@ public class Adventure {
      */
     public static void main(String[] args) {
         AdventureStub.main(args); // Replace with your code
+    private void playGame() {
+        while (true) {
+            try {
+                System.out.print("> ");
+                String input = scan.nextLine().toUpperCase();
+                String[] words = input.split("\\s+");
+                AdvCommand command = commands.get(words[0]);
+                if (words.length > 1) {
+                    AdvObject obj = objects.get(words[1]);
+                    command.execute(this, obj);
+                } else {
+                    command.execute(this, null);
+                }
+            } catch (Exception e) {
+                System.out.println("I don't understand.");
+            }
+        }
+    }
+
     private void setUpRooms(String gameName) {
         try {
             Scanner roomScan = new Scanner(new File(DATA_PATH + gameName + "Rooms.txt"));
