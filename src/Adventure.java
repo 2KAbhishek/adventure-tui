@@ -77,7 +77,11 @@ public class Adventure {
      * of the room and its contents.
      */
     public void executeLookCommand() {
-        super.executeLookCommand(); // Replace with your code
+        System.out.println(String.join("\n", currentRoom.getDescription()));
+
+        for (int i = 0; i < currentRoom.getObjectCount(); i++) {
+            System.out.println("  " + currentRoom.getObject(i).getDescription());
+        }
     }
 
     /* Method: executeInventoryCommand() */
