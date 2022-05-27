@@ -68,7 +68,14 @@ public class Adventure {
      * the user.
      */
     public void executeHelpCommand() {
-        super.executeHelpCommand(); // Replace with your code
+        System.out.println("Gameplay Guide:");
+        System.out.println("This is a text adventure game.");
+        System.out.println("You can move around the game and do various things by typing commands.");
+        System.out.println("  DIRECTION:   You can move in the four cardinal directions.");
+        System.out.println("  TAKE <item>: You can pick up an item.");
+        System.out.println("  DROP <item>: You can drop an item.");
+        System.out.println("  INVENTORY:   You can see what you are carrying.");
+        System.out.println("  HELP:        You can get this help text.");
     }
 
     /* Method: executeLookCommand() */
