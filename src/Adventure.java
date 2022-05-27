@@ -97,6 +97,23 @@ public class Adventure {
         }
     }
 
+    private void setUpSynonyms(String gameName) {
+        try {
+            Scanner scan = new Scanner(new File(DATA_PATH + gameName + "Synonyms.txt"));
+            while (scan.hasNextLine()) {
+                String line = scan.nextLine();
+                String[] words = line.split("\\s+");
+                if (commands.containsKey(words[0])) {
+                    commands.put(words[0], commands.get(words[1]));
+                }
+                if (objects.containsKey(words[0])) {
+                    objects.put(words[0], objects.get(words[1]));
+                }
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+            System.exit(1);
+        }
     }
 
     /* Method: executeMotionCommand(direction) */
