@@ -79,8 +79,9 @@ public class AdvObject {
      * @return the object if an object is successfully read; null at end of file
      */
     public static AdvObject readFromFile(Scanner scan) {
-        if (!scan.hasNext())
+        if (!scan.hasNext()) {
             return null;
+        }
         String name = scan.next();
         String description = scan.nextLine().trim();
         int initialLocation = scan.nextInt();
