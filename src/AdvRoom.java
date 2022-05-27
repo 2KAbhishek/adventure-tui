@@ -5,7 +5,6 @@
  * Adventure game.
  */
 
-import java.io.*;
 import java.util.*;
 
 /* Class: AdvRoom */
