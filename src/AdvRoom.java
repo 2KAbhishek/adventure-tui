@@ -80,7 +80,7 @@ public class AdvRoom {
      *            AdvObject to be added
      */
     public void addObject(AdvObject obj) {
-        super.addObject(obj);
+        objects.add(obj);
     }
 
     /* Method: removeObject(obj) */
@@ -92,7 +92,7 @@ public class AdvRoom {
      *            AdvObject to be removed
      */
     public void removeObject(AdvObject obj) {
-        super.removeObject(obj);
+        objects.remove(obj);
     }
 
     /* Method: containsObject(obj) */
@@ -105,7 +105,7 @@ public class AdvRoom {
      * @return true if the object is in the room, and false otherwise
      */
     public boolean containsObject(AdvObject obj) {
-        return super.containsObject(obj);
+        return objects.contains(obj);
     }
 
     /* Method: getObjectCount() */
@@ -116,7 +116,7 @@ public class AdvRoom {
      * @return The number of objects in the room
      */
     public int getObjectCount() {
-        return super.getObjectCount();
+        return objects.size();
     }
 
     /* Method: getObject(index) */
@@ -127,7 +127,7 @@ public class AdvRoom {
      * @return The AdvObject at the specified index position
      */
     public AdvObject getObject(int index) {
-        return super.getObject(index);
+        return objects.get(index);
     }
 
     /* Method: setVisited(flag) */
