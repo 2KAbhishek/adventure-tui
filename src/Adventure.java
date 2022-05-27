@@ -37,7 +37,22 @@ public class Adventure {
      * Runs the adventure program
      */
     public static void main(String[] args) {
-        AdventureStub.main(args); // Replace with your code
+        System.out.println("\n\nWelcome to the Adventure TUI!\n");
+        System.out.print("Enter the name of the game you want to load: ");
+        Adventure game = new Adventure();
+        String gameName = scan.next();
+        game.rooms = new ArrayList<AdvRoom>();
+        game.inventory = new ArrayList<AdvObject>();
+        game.commands = new HashMap<String, AdvCommand>();
+        game.objects = new HashMap<String, AdvObject>();
+        game.setUpRooms(gameName);
+        game.setCurrentRoom(1);
+        game.setUpObjects(gameName);
+        game.setUpCommands();
+        game.setUpSynonyms(gameName);
+        game.playGame();
+    }
+
     private void playGame() {
         while (true) {
             try {
