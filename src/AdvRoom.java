@@ -189,12 +189,6 @@ public class AdvRoom {
      * @return a room if successfully read; null if at end of file
      */
     public static AdvRoom readFromFile(Scanner scan) {
-        // while (!scan.hasNextInt()) {
-        //     if (!scan.hasNextLine()) {
-        //         return null;
-        //     }
-        //     scan.nextLine();
-        // }
         String line = scan.nextLine();
         if (line.equals("")) {
             return null;
