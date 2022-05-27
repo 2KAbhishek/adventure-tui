@@ -1,0 +1,142 @@
+Crowther
+in
+take keys
+out
+down
+d
+down
+d
+take lamp
+i
+west
+w
+take rod
+i
+east
+i
+west
+xyzzy
+xyzzy
+up
+up
+west
+release rod
+east
+l
+take bird
+west
+take rod
+w
+d
+s
+l
+take nugget
+i
+out
+up
+west
+wave
+take diamond
+i
+east
+west
+north
+east
+west
+east
+east
+east
+take bag
+i
+w
+n
+d
+e
+drop bird
+drop coins
+drop lamp
+drop nugget
+n
+take emerald
+out
+take bird
+take coins
+take lamp
+take nugget
+i
+west
+up
+s
+s
+w
+wave
+w
+s
+s
+e
+n
+n
+take chest
+i
+out
+west
+d
+e
+e
+xyzzy
+plugh
+s
+d
+w
+WEST
+D
+take plant
+i
+UP
+W
+EAST
+DOWN
+release plant
+WATER
+take eggs
+i
+n
+swim
+out
+east
+east
+east
+up
+n
+s
+s
+s
+n
+n
+n
+i
+drop gold
+plugh
+n
+plugh
+take gold
+plugh
+s
+s
+s
+w
+wave
+w
+s
+s
+e
+w
+e
+d
+e
+e
+xyzzy
+help
+n
+q
+y
