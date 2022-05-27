@@ -50,6 +50,13 @@ public class Adventure {
      */
     public void executeMotionCommand(String direction) {
         super.executeMotionCommand(direction); // Replace with your code
+    private boolean hasItem(String keyName) {
+        for (AdvObject obj : inventory) {
+            if (obj.getName().equals(keyName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /* Method: executeQuitCommand() */
