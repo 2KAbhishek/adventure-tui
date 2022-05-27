@@ -86,7 +86,9 @@ public class Adventure {
      * what the user is carrying.
      */
     public void executeInventoryCommand() {
-        super.executeInventoryCommand(); // Replace with your code
+        for (AdvObject obj : inventory) {
+            System.out.println(obj.getDescription());
+        }
     }
 
     /* Method: executeTakeCommand(obj) */
@@ -98,7 +100,8 @@ public class Adventure {
      *            The AdvObject you want to take
      */
     public void executeTakeCommand(AdvObject obj) {
-        super.executeTakeCommand(obj); // Replace with your code
+        inventory.add(obj);
+        currentRoom.removeObject(obj);
     }
 
     /* Method: executeDropCommand(obj) */
@@ -110,9 +113,7 @@ public class Adventure {
      *            The AdvObject you want to drop
      */
     public void executeDropCommand(AdvObject obj) {
-        super.executeDropCommand(obj); // Replace with your code
+        inventory.remove(obj);
+        currentRoom.addObject(obj);
     }
-
-    /* Private instance variables */
-    // Add your own instance variables here
 }
