@@ -78,6 +78,8 @@ public class AdvObject extends AdvObjectStub {
     }
 
     /* Private instance variables */
-    // Add your own instance variables here
+    private String name;
+    private String description;
+    private int initialLocation;
 
 }
