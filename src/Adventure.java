@@ -160,6 +160,11 @@ public class Adventure {
      */
     public void executeMotionCommand(String direction) {
         for (AdvMotionTableEntry entry : currentRoom.getMotionTable()) {
+            if (entry.getDirection().equals("FORCED")) {
+                setCurrentRoom(entry.getDestinationRoom());
+                return;
+            }
+
             if (entry.getDirection().equals(direction)) {
                 if (entry.getKeyName() != null) {
                     if (!hasItem(entry.getKeyName())) {
