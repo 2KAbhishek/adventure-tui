@@ -38,7 +38,7 @@ public class Adventure {
      */
     public static void main(String[] args) {
         System.out.println("\n\nWelcome to the Adventure TUI!\n");
-        System.out.print("Enter the name of the game you want to load: ");
+        System.out.print("What will be your adventure tonight?: ");
         Adventure game = new Adventure();
         String gameName = scan.next();
         game.rooms = new ArrayList<AdvRoom>();
