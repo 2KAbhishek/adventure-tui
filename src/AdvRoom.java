@@ -20,9 +20,6 @@ import java.util.*;
  * <li>A flag indicating whether the room has been visited
  * <li>A motion table specifying the exits and where they lead</li>
  *
- * The external format of the room data file is described in the assignment
- * handout. The comments on the methods exported by this class show how to use
- * the initialized data structure.
  */
 
 public class AdvRoom {

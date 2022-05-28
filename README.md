@@ -75,6 +75,10 @@ Example:
 
 ```
 
+### Adding new Adventures!
+
+
+
 ## How it was built
 
 adventure-tui was built using `<tech/library>`
@@ -85,20 +89,15 @@ While building adventure-tui the main challenges were `<issue/difficulty>`
 
 ## What I learned
 
-While building adventure-tui I `<learned/accomplished>` about `<learning/accomplishment>`
+While building adventure-tui I learned about
+
+- How to build abstractions using OOP
+- Efficient use of txt files for data storage
+- Building Text adventure games is fun!
 
 ## What's next
 
-Planning to add `<feature/module>`.
-
-### To-Do
-
-- [x] Setup repo
-- [ ] Think real hard
-- [ ] Start typing
-- [ ] Change me
-- [ ] Update README
-- [ ] Finish it
+Maybe add a new game, just have to add a new rooms and objects file!
 
 Hit the ⭐ button if you found this useful.
 

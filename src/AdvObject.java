@@ -18,9 +18,6 @@ import java.util.Scanner;
  * <li>The room number in which the object initially lives
  * </li>
  *
- * The external format of the objects file is described in the
- * assignment handout. The comments on the methods exported by
- * this class show how to use the initialized data structure.
  */
 
 public class AdvObject {

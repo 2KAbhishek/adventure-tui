@@ -1,7 +1,7 @@
 /*
  * File: Adventure.java
  * --------------------
- * This program plays the Adventure game from Assignment #4.
+ * This program plays the Adventure game.
  */
 
 import java.io.*;
