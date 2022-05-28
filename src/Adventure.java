@@ -199,7 +199,7 @@ public class Adventure {
      */
     public void executeQuitCommand() {
         System.out.println("Do you want to quit the game?");
-        if (scan.next().trim().equals("YES")) {
+        if (scan.next().trim().equalsIgnoreCase("yes")) {
             System.exit(0);
         }
     }
