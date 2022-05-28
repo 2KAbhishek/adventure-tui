@@ -54,10 +54,14 @@ public class Adventure {
     }
 
     private void playGame() {
+        scan.nextLine();
         while (true) {
             try {
                 System.out.print("> ");
                 String input = scan.nextLine().toUpperCase();
+                if (input.equals("")) {
+                    continue;
+                }
                 String[] words = input.split("\\s+");
                 AdvCommand command = commands.get(words[0]);
                 if (words.length > 1) {
