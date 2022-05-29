@@ -207,6 +207,8 @@ Hit the ⭐ button if you found this useful.
 
 ## More Info
 
+[Demo Video](https://vimeo.com/714924428)
+
 <div align="center">
 
 <a href="https://github.com/2KAbhishek/adventure-tui">Source</a> | <a href="https://2kabhishek.github.io/adventure-tui">Website</a>
