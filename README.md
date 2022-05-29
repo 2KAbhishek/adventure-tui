@@ -76,7 +76,7 @@ Once you run the game you will be asked to choose an adventure, You can choose b
 
 If you see errors while running from the Terminal, you can edit the `DATA_PATH` variable in `src/Adventure.java`
 
-## Adding new Adventures!
+## Adding new Adventures
 
 You can add your own adventures by adding `<AdventureName>Rooms.txt`, `<AdventureName>Objects.txt` and `<AdventureName>Synonyms.txt` to the `data` folder.
 
@@ -92,7 +92,7 @@ It also contains something called a motion table that defines the different room
 
 #### Structure of a Rooms
 
-```
+```text
 1 # Room number
 Outside building # Room name
 This is outside a building. # Room description
@@ -110,7 +110,8 @@ FORCED    0 # If direction is forced, the game will forcefully take you to the d
 ```
 
 #### Example Room Data
-```
+
+```text
 1
 Outside building
 You are standing at the end of a road before a small brick
@@ -140,7 +141,7 @@ Objects data file contains info about all the objects in the game and their init
 
 #### Structure of Objects
 
-```
+```text
 KEYS # Object Name
 Shining metal keys # Object description
 3 # Initial room location
@@ -152,7 +153,7 @@ A bright lamp
 
 #### Example Objects Data
 
-```
+```text
 KEYS
 a set of keys
 3
@@ -173,7 +174,8 @@ Synonyms data file is used for creating mappings or shortcuts for Actions/Direct
 So something like `BAG OF GOLD COINS` can be called `COINS` or `GOLD`
 
 #### Structure of Synonyms
-```
+
+```text
 GOLD=BAG OF COLD COINS
 COINS=BAG OF GOLD COINS
 IN=INSIDE
