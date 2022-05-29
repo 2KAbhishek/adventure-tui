@@ -86,7 +86,11 @@ The Rooms, Objects and Synonyms follow a particular syntax, follow these to add 
 
 ### Adding Rooms
 
-Structure of a Rooms data file
+Rooms data file contains information about all the rooms or areas part of your adventure game.
+
+It also contains something called a motion table that defines the different rooms you can go from there.
+
+#### Structure of a Rooms
 
 ```
 1 # Room number
@@ -132,7 +136,9 @@ DOWN       1
 
 ### Adding Objects
 
-Structure of an Objects data file
+Objects data file contains info about all the objects in the game and their initial location.
+
+#### Structure of Objects
 
 ```
 KEYS # Object Name
