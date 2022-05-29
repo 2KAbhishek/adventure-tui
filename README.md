@@ -160,6 +160,20 @@ a black rod with a rusty star
 12
 ```
 
+### Adding Synonyms
+
+Synonyms data file is used for creating mappings or shortcuts for Actions/Directons/Objects in the game.
+
+So something like `BAG OF GOLD COINS` can be called `COINS` or `GOLD`
+
+#### Structure of Synonyms
+```
+GOLD=BAG OF COLD COINS
+COINS=BAG OF GOLD COINS
+IN=INSIDE
+Q=QUIT
+```
+
 ## How it was built
 
 adventure-tui was built using `java` and lots of imagination!
