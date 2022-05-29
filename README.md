@@ -132,13 +132,42 @@ DOWN       1
 
 ### Adding Objects
 
+Structure of an Objects data file
+
+```
+KEYS # Object Name
+Shining metal keys # Object description
+3 # Initial room location
+# Empty line
+LAMP
+A bright lamp
+8
+```
+
+#### Example Objects Data
+
+```
+KEYS
+a set of keys
+3
+
+LAMP
+a brightly shining brass lamp
+8
+
+ROD
+a black rod with a rusty star
+12
+```
+
 ## How it was built
 
-adventure-tui was built using `<tech/library>`
+adventure-tui was built using `java` and lots of imagination!
 
 ## Challenges faced
 
-While building adventure-tui the main challenges were `<issue/difficulty>`
+- Building out the Abstractions was challenging
+- Breaking the problem into smaller pieces was daunting in the begining
 
 ## What I learned
 
