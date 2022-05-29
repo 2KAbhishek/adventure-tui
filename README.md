@@ -35,17 +35,19 @@
 
 ## What is this
 
-adventure-tui is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
+Adventure TUI is a text adventure game, where you can explore different world right from you terminal.
+
+You can add your own adventures too, see below to learn how.
 
 ## Inspiration
 
-adventure-tui was inspired by `<reason/idea>`.
+I have spent so many nights on text-based adventure games, this is my tribute to Will Crowther's original "Adventure" from early 1970s.
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed the latest version of `<coding_language/dependency/requirement_1>`
+- You have installed the latest version of `java`
 
 ## Getting adventure-tui
 
@@ -54,30 +56,77 @@ To get adventure-tui, follow these steps:
 ```bash
 git clone https://github.com/2kabhishek/adventure-tui
 cd adventure-tui
-<install_command>
 ```
 
 ## Using adventure-tui
 
-```bash
-USAGE:
-    command [FLAGS] [OPTIONS]
+After cloning you can use VS Code (with Java extentsions), or any other editor/IDE to run this.
 
-FLAGS:
-    -h, --help              Prints help information.
-
-OPTIONS:
-    -o, --option <value>    Option description.
-    Options are: a, b. [default: a]
-
-Example:
-
+For running it from the command line, follow these steps
 
 ```
+cd src/
+# Compile Adventure.java
+javac Adventure.java
+# Run Adventure.java
+java Adventure
+```
 
-### Adding new Adventures!
+Once you run the game you will be asked to choose an adventure, You can choose between `Crowther`, `Small` or a custom adventure you added.
 
+If you see errors while running from the Terminal, you can edit the `DATA_PATH` variable in `src/Adventure.java`
 
+## Adding new Adventures!
+
+You can add your own adventures by adding `<AdventureName>Rooms.txt`, `<AdventureName>Objects.txt` and `<AdventureName>Synonyms.txt` to the `data` folder.
+
+The Rooms, Objects and Synonyms follow a particular syntax, follow these to add your own adventures!
+
+> Everything after # is a comment, note that the data files themselves do not support comments
+
+### Adding Rooms
+
+Structure of a Rooms data file
+
+```
+1 # Room number
+Outside building # Room name
+This is outside a building. # Room description
+There are gates on all four sides # Can be multi line too
+----- # Room description and motion table separator
+WEST    2 # Direction    Destination Room Number
+EAST    3 # DIRECTION should be in caps
+NORTH   4
+ # Mandatory empty line
+2 # New Room starts
+```
+
+#### Example Room Data
+```
+1
+Outside building
+You are standing at the end of a road before a small brick
+building.  A small stream flows out of the building and
+down a gully to the south.  A road runs up a small hill
+to the west.
+-----
+WEST       2
+UP         2
+NORTH      3
+IN         3
+SOUTH      4
+DOWN       4
+
+2
+End of road
+You are at the end of a road at the top of a small hill.
+You can see a small building in the valley to the east.
+-----
+EAST       1
+DOWN       1
+```
+
+### Adding Objects
 
 ## How it was built
 
