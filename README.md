@@ -96,9 +96,13 @@ There are gates on all four sides # Can be multi line too
 ----- # Room description and motion table separator
 WEST    2 # Direction    Destination Room Number
 EAST    3 # DIRECTION should be in caps
-NORTH   4
+NORTH   4/KEYS # If any room has / and <ObjectName> appended to it, that means this room is locked and you need to have the <ObjectName> in your inventory in order to proceed
  # Mandatory empty line
 2 # New Room starts
+Dark Abyss
+A dark abyss
+-----
+FORCED    0 # If direction is forced, the game will forcefully take you to the destination room
 ```
 
 #### Example Room Data
